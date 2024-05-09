@@ -1,7 +1,6 @@
 import prompt from 'prompt-sync';
-import { MotoEsportiva } from './automovel';
+import { z800 } from './automovel';
 
-let z800 : MotoEsportiva = new MotoEsportiva('z800',true,14,270,false,false,20,42);
 
 let teclado = prompt();
 let option: number = 0;

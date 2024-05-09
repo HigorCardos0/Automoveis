@@ -1,5 +1,3 @@
-import prompt from 'prompt-sync';
-
 
                export class Funcionamento{
                 protected _combustivel:number;
@@ -27,8 +25,6 @@ import prompt from 'prompt-sync';
                   console.log('||2 Aguardar 70 segundos   ||');
                   console.log('||3 Parar de aguardar      ||');
                   console.log('+===========================+');
- 
-                  option = +teclado("Escolha uma ação!");
 
                   switch (option) {
                      case 1:
@@ -108,8 +104,6 @@ import prompt from 'prompt-sync';
                       console.log('||7 269                    ||');
                       console.log('||8 parar de acelerar      ||');
                       console.log('+===========================+');
-     
-                      option = +teclado("Escolha uma velocidade !");
     
                       switch (option) {
                          case 1:
@@ -223,8 +217,6 @@ import prompt from 'prompt-sync';
                     console.log('||1 Frear gradativamente(Parar)  ||');
                     console.log('||1 Frear bruscamente(emergencia)||');
                     console.log('+=================================+');
-     
-                      option = +teclado("Escolha uma marcha!");
     
                       switch (option) {
                          case 1:
@@ -300,8 +292,7 @@ import prompt from 'prompt-sync';
                   console.log('||7 6 marcha               ||');
                   console.log('||8 Parar as trocas        ||');
                   console.log('+===========================+');
- 
-                  option = +teclado("Escolha uma marcha!");
+
 
                   switch (option) {
                      case 1:
@@ -397,3 +388,4 @@ import prompt from 'prompt-sync';
                         this.trackDay = trackDay;
                   }
                 };
+                  export let z800 : MotoEsportiva = new MotoEsportiva('z800',true,14,270,false,false,20,42);
