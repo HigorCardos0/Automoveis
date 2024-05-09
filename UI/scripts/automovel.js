@@ -14,9 +14,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.z800 = exports.MotoEsportiva = exports.automovel = exports.Funcionamento = void 0;
-var prompt_sync_1 = require("prompt-sync");
+//Object.defineProperty(exports, "__esModule", { value: true });
+//export const z800 = exports.MotoEsportiva = exports.automovel = exports.Funcionamento = void 0;
 var Funcionamento = /** @class */ (function () {
     function Funcionamento(combustivel, pneuPressao) {
         this._bateria = 100;
@@ -32,7 +31,6 @@ var Funcionamento = /** @class */ (function () {
     Funcionamento.prototype.ligarChave = function () {
         this._energia += 1;
         this._bateria -= 30;
-        var teclado = (0, prompt_sync_1.default)();
         var option = 0;
         while (option != 3) {
             console.log('+===========================+');
@@ -40,7 +38,7 @@ var Funcionamento = /** @class */ (function () {
             console.log('||2 Aguardar 70 segundos   ||');
             console.log('||3 Parar de aguardar      ||');
             console.log('+===========================+');
-            option = +teclado("Escolha uma ação!");
+
             switch (option) {
                 case 1:
                     this._bateria -= 40;
@@ -58,7 +56,8 @@ var Funcionamento = /** @class */ (function () {
     ;
     return Funcionamento;
 }());
-exports.Funcionamento = Funcionamento;
+const _Funcionamento = Funcionamento;
+// export { _Funcionamento as Funcionamento };
 ;
 var automovel = /** @class */ (function (_super) {
     __extends(automovel, _super);
@@ -117,7 +116,7 @@ var automovel = /** @class */ (function (_super) {
     ;
     automovel.prototype.acelerar = function () {
         if (this._velocidadeAtual < this._velocidadeMax && this._rpm < this._rpmMaxima && this._partida == 1) {
-            var teclado = (0, prompt_sync_1.default)();
+            var teclado = (0, prompt_sync_1)();
             var option = 0;
             while (option != 8) {
                 console.log('+===========================+');
@@ -264,7 +263,7 @@ var automovel = /** @class */ (function (_super) {
     ;
     automovel.prototype.frear = function () {
         if (this._velocidadeAtual > 1 && this._partida == 1) {
-            var teclado = (0, prompt_sync_1.default)();
+            var teclado = (0, prompt_sync_1)();
             var option = 0;
             while (option != 8) {
                 console.log('+=================================+');
@@ -336,7 +335,7 @@ var automovel = /** @class */ (function (_super) {
     };
     automovel.prototype.trocarMarcha = function () {
         if (this._energia == 1) {
-            var teclado = (0, prompt_sync_1.default)();
+            var teclado = (0, prompt_sync_1)();
             var option = 0;
             while (option != 8) {
                 console.log('+===========================+');
@@ -450,7 +449,8 @@ var automovel = /** @class */ (function (_super) {
     ;
     return automovel;
 }(Funcionamento));
-exports.automovel = automovel;
+const _automovel = automovel;
+// export { _automovel as automovel };
 ;
 var MotoEsportiva = /** @class */ (function (_super) {
     __extends(MotoEsportiva, _super);
@@ -462,6 +462,7 @@ var MotoEsportiva = /** @class */ (function (_super) {
     }
     return MotoEsportiva;
 }(automovel));
-exports.MotoEsportiva = MotoEsportiva;
+const _MotoEsportiva = MotoEsportiva;
+// export { _MotoEsportiva as MotoEsportiva };
 ;
-exports.z800 = new MotoEsportiva('z800', true, 14, 270, false, false, 20, 42);
+ const z800 = new MotoEsportiva('z800', true, 14, 270, false, false, 20, 42);
