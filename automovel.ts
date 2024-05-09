@@ -129,7 +129,7 @@ import prompt from 'prompt-sync';
 
                               console.log(`${this._velocidadeAtual} Km/h ${this._rpm} Rpm`);
                             }else{
-                              console.log('Marcha correta impossivel acelerar');
+                              console.log('Marcha incorreta impossivel acelerar');
                             };
                           }else{
                             console.log('Não e possivel acelerar nessa velocidade pois sua velocidade esta mais alta que a solicitada ou a moto nao esta ligada');
