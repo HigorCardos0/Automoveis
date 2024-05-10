@@ -24,3 +24,23 @@
     background: crimson;
     color: #fff;
 }
+
+.btn-blue{
+    background: rgb(42, 114, 208);
+    color: #fff;
+}
+
+.btn-green{
+    background: rgb(24, 220, 112);
+    color: #fff;
+}
+
+.btn-orange{
+    background: rgb(239, 124, 23);
+    color: #fff;
+}
+
+.btn-black{
+    background: rgb(40, 9, 0);
+    color: #fff;
+}
