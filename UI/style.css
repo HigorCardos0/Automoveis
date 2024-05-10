@@ -1,0 +1,26 @@
+.btn{
+    padding: 10px 8px;
+    width: 50px;
+    color: rgb(0, 0, 0);
+    background: #323445;
+    border: 1px solid #555;
+    border-radius: 5px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background:#393939;
+    transition: 1s;
+}
+
+.btn-yellow{
+    background: #c1d714;
+    color: #fff;
+}
+
+.btn-red{
+    background: crimson;
+    color: #fff;
+}

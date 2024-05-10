@@ -397,3 +397,4 @@ import prompt from 'prompt-sync';
                         this.trackDay = trackDay;
                   }
                 };
+                  export let z800 : MotoEsportiva = new MotoEsportiva('z800',true,14,270,false,false,20,42);
