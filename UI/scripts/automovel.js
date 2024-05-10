@@ -14,8 +14,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-//Object.defineProperty(exports, "__esModule", { value: true });
-//export const z800 = exports.MotoEsportiva = exports.automovel = exports.Funcionamento = void 0;
+
 var Funcionamento = /** @class */ (function () {
     function Funcionamento(combustivel, pneuPressao) {
         this._bateria = 100;
@@ -57,7 +56,7 @@ var Funcionamento = /** @class */ (function () {
     return Funcionamento;
 }());
 const _Funcionamento = Funcionamento;
-// export { _Funcionamento as Funcionamento };
+
 ;
 var automovel = /** @class */ (function (_super) {
     __extends(automovel, _super);
@@ -101,6 +100,11 @@ var automovel = /** @class */ (function (_super) {
         ;
     };
     ;
+    automovel.prototype.ignicao = function () {
+        this._energia += 1;
+        this._bateria -= 30;
+        }
+    ;
     automovel.prototype.partida = function () {
         if (this._energia == 1 && this._bateria > 10) {
             this._partida = +1;
@@ -114,153 +118,18 @@ var automovel = /** @class */ (function (_super) {
         ;
     };
     ;
-    automovel.prototype.acelerar = function () {
-        if (this._velocidadeAtual < this._velocidadeMax && this._rpm < this._rpmMaxima && this._partida == 1) {
-            var teclado = (0, prompt_sync_1)();
-            var option = 0;
-            while (option != 8) {
-                console.log('+===========================+');
-                console.log('||1 30                     ||');
-                console.log('||2 70                     ||');
-                console.log('||3 120                    ||');
-                console.log('||4 170                    ||');
-                console.log('||5 200                    ||');
-                console.log('||6 240                    ||');
-                console.log('||7 269                    ||');
-                console.log('||8 parar de acelerar      ||');
-                console.log('+===========================+');
-                option = +teclado("Escolha uma velocidade !");
-                switch (option) {
-                    case 1:
-                        if (this._velocidadeAtual < 40 && this._marchaAtual == 1 && this._partida == 1) {
-                            this._velocidadeAtual = 30;
-                            this._rpm = 6;
-                            console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
-                        }
-                        else {
-                            console.log('Essa velocidade não é possivel pois nao cumpre com algum dos requisitos necessario do motor');
-                        }
-                        ;
-                        break;
-                    case 2:
-                        if (this._velocidadeAtual < 70 && this._partida == 1) {
-                            if (this._marchaAtual == 1 || this._marchaAtual == 2 || this._marchaAtual == 3) {
-                                this._velocidadeAtual = 70;
-                                this._rpm = 8;
-                                console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
-                            }
-                            else {
-                                console.log('Marcha incorreta impossivel acelerar');
-                            }
-                            ;
-                        }
-                        else {
-                            console.log('Não e possivel acelerar nessa velocidade pois sua velocidade esta mais alta que a solicitada ou a moto nao esta ligada');
-                            console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
-                        }
-                        ;
-                        break;
-                    case 3:
-                        if (this._velocidadeAtual < 119 && this._partida == 1) {
-                            if (this._marchaAtual == 2 || this._marchaAtual == 3 || this._marchaAtual == 4) {
-                                this._velocidadeAtual = 120;
-                                this._rpm = 10;
-                                console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
-                            }
-                            else {
-                                console.log('Marcha incorreta impossivel acelerar');
-                            }
-                            ;
-                        }
-                        else {
-                            console.log('Não e possivel acelerar nessa velocidade pois sua velocidade esta mais alta que a solicitada ou a moto nao esta ligada');
-                            console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
-                        }
-                        ;
-                        break;
-                    case 4:
-                        if (this._velocidadeAtual < 169 && this._partida == 1) {
-                            if (this._marchaAtual >= 3) {
-                                this._velocidadeAtual = 170;
-                                this._rpm = 11;
-                                console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
-                            }
-                            else {
-                                console.log('Marcha incorreta impossivel acelerar');
-                            }
-                            ;
-                        }
-                        else {
-                            console.log('Não e possivel acelerar nessa velocidade pois sua velocidade esta mais alta que a solicitada ou a moto nao esta ligada');
-                            console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
-                        }
-                        ;
-                        break;
-                    case 5:
-                        if (this._velocidadeAtual < 200 && this._partida == 1) {
-                            if (this._marchaAtual >= 4) {
-                                this._velocidadeAtual = 200;
-                                this._rpm += 8;
-                                console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
-                            }
-                            else {
-                                console.log('Marcha incorreta impossivel acelerar');
-                            }
-                            ;
-                        }
-                        else {
-                            console.log('Não e possivel acelerar nessa velocidade pois sua velocidade esta mais alta que a solicitada ou a moto nao esta ligada');
-                            console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
-                        }
-                        ;
-                        break;
-                    case 6:
-                        if (this._velocidadeAtual < 241 && this._partida == 1) {
-                            if (this._marchaAtual >= 5) {
-                                this._velocidadeAtual = 240;
-                                this._rpm += 9;
-                                console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
-                            }
-                            else {
-                                console.log('Marcha incorreta impossivel acelerar');
-                            }
-                            ;
-                        }
-                        else {
-                            console.log('Não e possivel acelerar nessa velocidade pois sua velocidade esta mais alta que a solicitada ou a moto nao esta ligada');
-                            console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
-                        }
-                        ;
-                        break;
-                    case 7:
-                        if (this._velocidadeAtual < 271 && this._partida == 1) {
-                            if (this._marchaAtual == 6) {
-                                this._velocidadeAtual = this._velocidadeMax -= 1;
-                                this._rpm = this._rpmMaxima;
-                                console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
-                            }
-                            else {
-                                console.log('Marcha incorreta impossivel acelerar');
-                            }
-                            ;
-                        }
-                        else {
-                            console.log('Não e possivel acelerar nessa velocidade pois sua velocidade esta mais alta que a solicitada ou a moto nao esta ligada');
-                            console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
-                        }
-                        ;
-                        break;
-                }
-                ;
-            }
-            ;
+    automovel.prototype.acelerar30 = function () {
+        if (this._velocidadeAtual < 40 && this._marchaAtual == 1 && this._partida == 1) {
+            this._velocidadeAtual = 30;
+            this._rpm = 6;
+            console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
         }
         else {
-            console.log('Sistema não autorizou acelerar verifique se a moto esta ligada');
+            console.log('Essa velocidade não é possivel pois nao cumpre com algum dos requisitos necessario do motor');
         }
         ;
-    };
-    ;
+    }
+       
     automovel.prototype.frear = function () {
         if (this._velocidadeAtual > 1 && this._partida == 1) {
             var teclado = (0, prompt_sync_1)();
