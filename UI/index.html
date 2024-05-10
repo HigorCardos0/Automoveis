@@ -3,7 +3,6 @@
 <head>
 
 <title>Motorcycle simulator</title>
-<script src="scripts/demo.js"></script>
 <script src="scripts/automovel.js"></script>
 <link rel="stylesheet" href="style.css">
 
@@ -17,16 +16,34 @@
 </br>
 <div>
     <a class="btn btn-yellow">Ligar a chave
-        <button onclick="z800.ligarChave()"></button>
+        <button onclick="z800.ignicao()"></button>
     </a>
-    <a class="btn btn-yellow">Dar partida</a>
+    <a class="btn btn-yellow">Partida
+        <button onclick="z800.partida()"></button>
+    </a>
 </div>
 </br>
 </br>
 
 <div>
-    <a class="btn btn-red">Acelerar</a>
+    <a class="btn btn-red">Acelerar
+        <button onclick="z800.acelerar()"></button>
+    </a>
+    <a class="btn btn-red">Frear
+        <button onclick="z800.frear()"></button>
+    </a>
+    <a class="btn btn-red">Troca de marcha
+        <button onclick="z800.trocarMarcha()"></button>
+    </a>
 </div>
-
+<br><br>
+<div>
+    <a class="btn btn-blue">Painel
+        <button onclick="z800.painel()"></button>
+    </a>
+    <a class="btn btn-blue">Computador de bordo
+        <button onclick="z800.computadorDeBordo()"></button>
+    </a>
+</div>
 </body>
 </html>
