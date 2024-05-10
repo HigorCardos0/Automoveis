@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "Simulação basica utilizando typescript e orientação a objetos",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HigorCardos0/Automoveis.git"
   },
+  
   "author": "Higor Cardoso",
   "license": "MIT",
   "homepage": "https://github.com/HigorCardos0/Automoveis/blob/main/README.md",
@@ -16,7 +20,8 @@
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
-    "@types/prompt-sync": "^4.2.3"
+    "@types/prompt-sync": "^4.2.3",
+    "cypress": "^9.5.1"
   },
   "bugs": {
     "url": "https://github.com/HigorCardos0/Automoveis/issues"
