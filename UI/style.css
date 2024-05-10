@@ -1,7 +1,7 @@
 .btn{
     padding: 10px 8px;
     width: 50px;
-    color: rgb(0, 0, 0);
+    color: rgb(228, 228, 228);
     background: #323445;
     border: 1px solid #555;
     border-radius: 5px;
@@ -43,4 +43,8 @@
 .btn-black{
     background: rgb(40, 9, 0);
     color: #fff;
+}
+
+.button-big-space{
+    margin: 0 80px;
 }

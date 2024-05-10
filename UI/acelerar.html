@@ -12,34 +12,91 @@
 <h1>Motorcycle simulator</h1>
 <p>motorcycle simulator</p>
 
-<div class="btn">Ir até a moto</div>
+<div class="btn">Acelere</div>
 </br>
 <div>
     <a class="btn btn-green">30
         <button onclick="z800.acelerar30()"></button>
     </a>
     <a class="btn btn-green">70
-        <button onclick="z800.partida()"></button>
+        <button onclick="z800.acelerar70()"></button>
     </a>
     <a class="btn btn-yellow">120
-        <button onclick="z800.acelerar()"></button>
+        <button onclick="z800.acelerar120()"></button>
     </a>
     <a class="btn btn-yellow">170
-        <button onclick="z800.frear()"></button>
+        <button onclick="z800.acelerar170()"></button>
     </a>
     <a class="btn btn-orange">200
-        <button onclick="z800.trocarMarcha()"></button>
+        <button onclick="z800.acelerar200()"></button>
     </a>
     <a class="btn btn-red">240
-        <button onclick="z800.painel()"></button>
+        <button onclick="z800.acelerar240()"></button>
     </a>
     <a class="btn btn-black">269
-        <button onclick="z800.computadorDeBordo()"></button>  
+        <button onclick="z800.acelerar269()"></button>  
 
     <a class="btn btn-red" href="index.html">
         <button>Clique para executar outra ação</button>
  
     </a>
 </div>
+<br>
+<br>
+<div>
+    <a class="btn">Marchas</a>
+    <a class=" btn button-big-space">freio</a>
+</div>
+<br>
+<br>
+<div>
+    <a class="btn btn-red">6
+        <button onclick="z800.marcha6()"></button>  
+    </a>
+    <a class=" btn button-big-space btn-green">Gradativo
+        <button onclick="z800.freiarGradativo()"></button>
+    </a>
+
+</div>
+<br>
+<div>
+    <a class="btn btn-orange">5
+        <button onclick="z800.marcha5()"></button> 
+    </a>
+    <a class=" btn button-big-space btn-red">Brusco
+        <button onclick="z800.freiarBrusco()"></button>
+    </a>
+</div>
+<br>
+<div>
+    <a class="btn btn-yellow">4
+        <button onclick="z800.marcha4()"></button>  
+    </a>
+</div>
+<br>
+<div>
+    <a class="btn btn-yellow">3
+        <button onclick="z800.marcha3()"></button>  
+    </a>
+</div>
+<br>
+<div>
+    <a class="btn btn-green">2
+        <button onclick="z800.marcha2()"></button>  
+    </a>
+</div>
+<br>
+<div>
+    <a class="btn">Neutro
+        <button onclick="z800.neutro()"></button>  
+    </a>
+</div>
+<br>
+<div>
+    <a class="btn btn-green">1
+        <button onclick="z800.marcha1()"></button>  
+    </a>
+</div>
+<div></div>
 </body>
 </html>
