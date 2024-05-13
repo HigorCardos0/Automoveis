@@ -90,7 +90,6 @@ var automovel = /** @class */ (function (_super) {
     ;
     automovel.prototype.painel = function () {
         if (this._energia == 1 && this._bateria > 10) {
-            console.log('======================');
             console.log("Rota\u00E7\u00E3o atual ".concat(this._rpm, "\nvelocidade atual ").concat(this._velocidadeAtual, " \n marcha atual ").concat(this._marchaAtual));
             this._bateria -= 30;
         }
@@ -103,17 +102,17 @@ var automovel = /** @class */ (function (_super) {
     automovel.prototype.ignicao = function () {
         this._energia += 1;
         this._bateria -= 30;
+        alert("Chave ligada pronta para partida")
         }
     ;
     automovel.prototype.partida = function () {
         if (this._energia == 1 && this._bateria > 10) {
             this._partida = +1;
-            console.log('======================');
-            console.log("".concat(this._nome, " esta pronto para uso!!!"));
+            alert("".concat(this._nome, " esta pronto para uso!!!"));
             this._bateria += 60;
         }
         else {
-            console.log("Falta de energia impossivel ligar ".concat(this._nome, " verifique se a chave esta ligada"));
+            alert("Falta de energia impossivel ligar ".concat(this._nome, " verifique se a chave esta ligada"));
         }
         ;
     };
@@ -122,10 +121,10 @@ var automovel = /** @class */ (function (_super) {
         if (this._velocidadeAtual < 40 && this._marchaAtual == 1 ) {
             this._velocidadeAtual = 30;
             this._rpm = 6;
-            console.log("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
+            alert("".concat(this._velocidadeAtual, " Km/h ").concat(this._rpm, " Rpm"));
         }
         else {
-            console.log('Essa velocidade não é possivel pois nao cumpre com algum dos requisitos necessario do motor');
+            alert('Essa velocidade não é possivel pois nao cumpre com algum dos requisitos necessario do motor');
         }
         ;
     }
@@ -322,30 +321,30 @@ var automovel = /** @class */ (function (_super) {
     automovel.prototype.marcha1 = function () {
         if (this._velocidadeAtual >= 0 && this._velocidadeAtual < 50) {
             this._marchaAtual = 1;
-            console.log("Voc\u00EA engatou a ".concat(this._marchaAtual, " marcha sua rota\u00E7\u00E3o esta em ").concat(this._rpm, "!"));
-            console.log("Velocidade atual ".concat(this._velocidadeAtual, "!"));
+            alert("Voc\u00EA engatou a ".concat(this._marchaAtual, " marcha sua rota\u00E7\u00E3o esta em ").concat(this._rpm, "!"));
+            alert("Velocidade atual ".concat(this._velocidadeAtual, "!"));
         }
         else {
-            console.log('Impossivel engatar essa marcha pois sua velocidade esta muito alta ou muito baixa');
+            alert('Impossivel engatar essa marcha pois sua velocidade esta muito alta ou muito baixa');
         }
         ;
     }
 
     automovel.prototype.neutro = function () {
          this._marchaAtual = 0;
-         console.log("Voc\u00EA engatou a ".concat(this._marchaAtual, " marcha sua rota\u00E7\u00E3o esta em ").concat(this._rpm, "!"));
-         console.log("Velocidade atual ".concat(this._velocidadeAtual, "!"));
+         alert("Voc\u00EA engatou a ".concat(this._marchaAtual, " marcha sua rota\u00E7\u00E3o esta em ").concat(this._rpm, "!"));
+         alert("Velocidade atual ".concat(this._velocidadeAtual, "!"));
     }
 
     automovel.prototype.marcha2 = function () {
         if (this._velocidadeAtual < 150 && this._velocidadeAtual > 50) {
             this._marchaAtual = 2;
             this._rpm -= 5;
-            console.log("Voc\u00EA engatou a ".concat(this._marchaAtual, " marcha sua rota\u00E7\u00E3o atual esta em ").concat(this._rpm, "!"));
-            console.log("Velocidade atual ".concat(this._velocidadeAtual, "!"));
+            alert("Voc\u00EA engatou a ".concat(this._marchaAtual, " marcha sua rota\u00E7\u00E3o atual esta em ").concat(this._rpm, "!"));
+            alert("Velocidade atual ".concat(this._velocidadeAtual, "!"));
         }
         else {
-            console.log('Impossivel engatar essa marcha pois sua velocidade esta muito alta ou muito baixa');
+            alert('Impossivel engatar essa marcha pois sua velocidade esta muito alta ou muito baixa');
         }
         ;
     }
@@ -354,11 +353,11 @@ var automovel = /** @class */ (function (_super) {
         if (this._velocidadeAtual < 183 && this._velocidadeAtual > 69) {
             this._marchaAtual = 3;
             this._rpm -= 5;
-            console.log("Voc\u00EA engatou a ".concat(this._marchaAtual, " marcha sua rota\u00E7\u00E3o atual esta em ").concat(this._rpm, "!"));
-            console.log("Velocidade atual ".concat(this._velocidadeAtual, "!"));
+            alert("Voc\u00EA engatou a ".concat(this._marchaAtual, " marcha sua rota\u00E7\u00E3o atual esta em ").concat(this._rpm, "!"));
+            alert("Velocidade atual ".concat(this._velocidadeAtual, "!"));
         }
         else {
-            console.log('Impossivel engatar essa marcha pois sua velocidade esta muito alta ou muito baixa');
+            alert('Impossivel engatar essa marcha pois sua velocidade esta muito alta ou muito baixa');
         }
         ;
     }
@@ -367,11 +366,11 @@ var automovel = /** @class */ (function (_super) {
         if (this._velocidadeAtual < 210 && this._velocidadeAtual > 90) {
             this._marchaAtual = 4;
             this._rpm -= 5;
-            console.log("Voc\u00EA engatou a ".concat(this._marchaAtual, " marcha sua rota\u00E7\u00E3o atual esta em ").concat(this._rpm, "!"));
-            console.log("Velocidade atual ".concat(this._velocidadeAtual, "!"));
+            alert("Voc\u00EA engatou a ".concat(this._marchaAtual, " marcha sua rota\u00E7\u00E3o atual esta em ").concat(this._rpm, "!"));
+            alert("Velocidade atual ".concat(this._velocidadeAtual, "!"));
         }
         else {
-            console.log('Impossivel engatar essa marcha pois sua velocidade esta muito alta ou muito baixa');
+            alert('Impossivel engatar essa marcha pois sua velocidade esta muito alta ou muito baixa');
         }
         ;
     }
@@ -380,11 +379,11 @@ var automovel = /** @class */ (function (_super) {
         if (this._velocidadeAtual < 250 && this._velocidadeAtual > 110) {
             this._marchaAtual = 5;
             this._rpm -= 5;
-            console.log("Voc\u00EA engatou a ".concat(this._marchaAtual, " marcha sua rota\u00E7\u00E3o atual esta em ").concat(this._rpm, "!"));
-            console.log("Velocidade atual ".concat(this._velocidadeAtual, "!"));
+            alert("Voc\u00EA engatou a ".concat(this._marchaAtual, " marcha sua rota\u00E7\u00E3o atual esta em ").concat(this._rpm, "!"));
+            alert("Velocidade atual ".concat(this._velocidadeAtual, "!"));
         }
         else {
-            console.log('Impossivel engatar essa marcha pois sua velocidade esta muito alta ou muito baixa');
+            alert('Impossivel engatar essa marcha pois sua velocidade esta muito alta ou muito baixa');
         }
         ;
     }
@@ -393,11 +392,11 @@ var automovel = /** @class */ (function (_super) {
         if (this._velocidadeAtual < 271 && this._velocidadeAtual > 140) {
             this._marchaAtual = 6;
             this._rpm -= 5;
-            console.log("Voc\u00EA engatou a ".concat(this._marchaAtual, " marcha sua rota\u00E7\u00E3o atual esta em ").concat(this._rpm, "!"));
-            console.log("Velocidade atual ".concat(this._velocidadeAtual, "!"));
+            alert("Voc\u00EA engatou a ".concat(this._marchaAtual, " marcha sua rota\u00E7\u00E3o atual esta em ").concat(this._rpm, "!"));
+            alert("Velocidade atual ".concat(this._velocidadeAtual, "!"));
         }
         else {
-            console.log('Impossivel engatar essa marcha pois sua velocidade esta muito alta ou muito baixa');
+            alert('Impossivel engatar essa marcha pois sua velocidade esta muito alta ou muito baixa');
         }
         ;
     }
