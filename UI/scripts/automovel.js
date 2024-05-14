@@ -118,16 +118,20 @@ var automovel = /** @class */ (function (_super) {
     };
     ;
     automovel.prototype.acelerar30 = function () {
-        if (this._velocidadeAtual < 40 && this._marchaAtual == 1 ) {
-            this._velocidadeAtual = 30;
-            this._rpm = 3;
-            this.painel2();
-        }
-        else {
+        if (this._marchaAtual < 3 ) {
+            if(this._marchaAtual == 1){ 
+                this._velocidadeAtual = 30;
+                this._rpm = 3;
+                this.painel2();
+            }else if(this._marchaAtual == 2){
+                this._velocidadeAtual = 30;
+                this._rpm = 2;
+                this.painel2();
+            };
+         }else {
             alert('Essa velocidade não é possivel pois nao cumpre com algum dos requisitos necessario do motor');
-        }
-        ;
-    }
+        };
+    };
 
     automovel.prototype.acelerar70 = function () {
         if (this._marchaAtual < 4) {
@@ -364,7 +368,11 @@ var automovel = /** @class */ (function (_super) {
 
     automovel.prototype.marcha2 = function () {
         if (this._velocidadeAtual < 150) {
-            if(this._velocidadeAtual == 70){
+            if(this._velocidadeAtual == 30){
+                this._marchaAtual = 2;
+                this._rpm = 2;
+                this.painel2();
+            }else if(this._velocidadeAtual == 70){
                 this._marchaAtual = 2;
                 this._rpm = 7;
                 this.painel2();
