@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@types/prompt-sync": "^4.2.3",
-    "cypress": "^10.3.1"
+    "cypress": "^9.5.1"
   },
   "bugs": {
     "url": "https://github.com/HigorCardos0/Automoveis/issues"
