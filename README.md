@@ -12,11 +12,9 @@ Run `npm install` (or `npm i` for the short version) to install the dev dependen
 
 ## Start simulator
 
-Open console with command prompt on Vscode
-
-To start the simulator you need to run the command 'ts-node demo.ts'
+Open a index.html with your browser
 
 ## Support this project
-
+(Project in progress)
 If you want to support this project, leave a ⭐.
 
